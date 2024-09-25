@@ -145,10 +145,12 @@ public class Emailer
 */
 public interface Addressee
 {
- public abstract String getName();
- public abstract String getEmail();
+ public String getName();
+ public String getEmail();
 }
+
 public class Employee implements Addressee {...}
+
 public class Emailer
 {
  public void sendEmail(Addressee e, String text) {...}
