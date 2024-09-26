@@ -133,6 +133,8 @@ public class ReportGenerator {
 
 /*
 * Stamp coupling example
+* This occurs whenever a class is declared as the type of a method argument.
+* Sometimes, this is a necessary form of design
 */
 public class Emailer
 {
