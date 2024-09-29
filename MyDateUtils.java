@@ -1,5 +1,5 @@
 class MyDateUtils { 
-  public boolean isWeekEnd(String aDate) {
+  public static boolean isWeekEnd(String aDate) {
       // Runtime validation for production
       if (!isValidDate(aDate)) {
           throw new IllegalArgumentException("Invalid date passed to isWeekEnd");
@@ -12,7 +12,7 @@ class MyDateUtils {
       return dayOfTheWeek(aDate) == SUNDAY || dayOfTheWeek(aDate) == SATURDAY;
   }
   
-  private int dayOfTheWeek(String aDate) {
+  private static int dayOfTheWeek(String aDate) {
       // Development-time assertion to ensure the method is called with valid input
       assert isValidDate(aDate) : "Invalid date passed to dayOfTheWeek";
       
