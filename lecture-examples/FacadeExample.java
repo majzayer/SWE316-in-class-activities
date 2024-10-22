@@ -25,8 +25,8 @@ class ClimateControlSystem {
 }
 
 class EntertainmentSystem {
-    public void playMusic() {
-        System.out.println("Playing music in the living room");
+    public void turnOnTV() {
+        System.out.println("Turning on the TV");
     }
 }
 
@@ -54,7 +54,7 @@ class HomeAutomationFacade {
         System.out.println("\nNight Routine Activated ----");
         security.armSecurity();
         lighting.turnOnLights();
-        entertainment.playMusic();
+        entertainment.turnOnTV();
     }
 }
 
