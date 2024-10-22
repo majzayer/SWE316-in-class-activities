@@ -19,18 +19,21 @@ class SecuritySystem {
 }
 
 class ClimateControlSystem {
-    public void setTemperature() {
-        System.out.println("Temperature is set to 22°C");
+    public void setTemperature(int temp) {
+        System.out.println("Temperature is set to " + temp + "°C");
     }
 }
 
 class EntertainmentSystem {
-    public void turnOnTV() {
-        System.out.println("Turning on the TV");
+    public void playMusic() {
+        System.out.println("Playing music in the living room");
     }
 }
 
 class HomeAutomationFacade {
+    private static final int MORNING_TEMP = 22;
+    private static final int NIGHT_TEMP = 20;
+
     private LightingSystem lighting;
     private SecuritySystem security;
     private ClimateControlSystem climateControl;
@@ -47,14 +50,15 @@ class HomeAutomationFacade {
         System.out.println("\nMorning Routine Activated ----");
         lighting.turnOffLights();
         security.disarmSecurity();
-        climateControl.setTemperature();
+        climateControl.setTemperature(MORNING_TEMP);
     }
 
     public void activateNightRoutine() {
         System.out.println("\nNight Routine Activated ----");
         security.armSecurity();
         lighting.turnOnLights();
-        entertainment.turnOnTV();
+        climateControl.setTemperature(NIGHT_TEMP);
+        entertainment.playMusic();
     }
 }
 
