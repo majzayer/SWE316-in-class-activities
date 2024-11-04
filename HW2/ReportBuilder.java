@@ -11,7 +11,6 @@ public class ReportBuilder {
         return report.toString();
     }
 
-    // Default implementation for header
     public String addReportHeader() {
         return "=== Report Header ===\n";
     }
@@ -21,7 +20,6 @@ public class ReportBuilder {
         return contentProvider.makeMainReportContent(employee);
     }
 
-    // Default implementation for footer
     public String addReportFooter() {
         return "\n=== Report Footer ===";
     }
