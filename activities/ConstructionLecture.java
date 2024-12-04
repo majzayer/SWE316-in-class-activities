@@ -1,4 +1,4 @@
-public void f(String s, ArrayList<String> arr) {
+public static void f(String s, ArrayList<String> arr) {
     s.concat("b");  // String operations
     s += "c";       // String concatenation
     arr.add("d");   // Modify the ArrayList
