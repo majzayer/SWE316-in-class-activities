@@ -1,7 +1,7 @@
 public static void f(String s, ArrayList<String> arr) {
-    s.concat("b");  // String operations
-    s += "c";       // String concatenation
-    arr.add("d");   // Modify the ArrayList
+    s.concat("b"); 
+    s += "c";     
+    arr.add("d"); 
 }
 
 public static void main(String[] args) {
