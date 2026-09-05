@@ -1,6 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.function.BiConsumer;
 
 public class Order {
     private static int nextNumber = 1000;
@@ -41,10 +41,8 @@ public class Order {
         return customer;
     }
 
-    public void forEachLine(BiConsumer<MenuItem, Integer> lineConsumer) {
-        for (OrderLine line : orderLines) {
-            lineConsumer.accept(line.getMenuItem(), line.getQuantity());
-        }
+    public List<OrderLine> getOrderLines() {
+        return Collections.unmodifiableList(orderLines);
     }
 
     public String getPaymentType() {
@@ -55,7 +53,7 @@ public class Order {
         return paid;
     }
 
-    private static class OrderLine {
+    public static class OrderLine {
         private MenuItem menuItem;
         private int quantity;
 
