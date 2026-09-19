@@ -19,4 +19,8 @@ public class BankAccount {
             System.out.println("Insufficient funds.");
         }
     }
+
+    private void setBalance(double balance) {
+        this.balance = balance;
+    }
 }
